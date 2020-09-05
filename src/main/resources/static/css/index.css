@@ -1,0 +1,83 @@
+html, body {
+    height: 100%;
+}
+body {
+    background-color: white;
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.bgImage {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: fadeIn 0.5s linear;
+}
+
+.wrapper{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.TDL {
+    color: #2d3436;
+    font-family: 'Playfair Display', serif;
+    font-size: 10em;
+}
+.imgOpacity{
+    opacity: 0.65;
+}
+
+.text-faded {
+    color: snow;
+    text-align: center;
+}
+
+  .btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 .2rem #eeb244;
+  }
+
+  .btn:hover {
+    color: #eeb244;
+    text-decoration: none;
+  }
+
+  .btn-primary {
+    background-color: #eeb244;
+    border-color: #eeb244;
+  }
+
+  .btn-xl {
+    padding: 1rem 2rem;
+  }
+
+  .btn {
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 300px;
+    font-family: Open Sans,Helvetica Neue,Arial,sans-serif;
+  }
+
+  .btn-primary {
+    color: #fff;
+  }
+
+  .pch{
+    text-decoration-line: none;
+    margin-top: 1%;
+  }

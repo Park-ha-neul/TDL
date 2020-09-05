@@ -1,0 +1,59 @@
+buildscript {
+    ext {
+        springBootVersion = '2.1.7.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+//add
+apply plugin: 'idea'
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group 'com.TDL.springboot'
+version '1.0-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter-web')
+    compile('org.projectlombok:lombok')
+    compile('org.springframework.boot:spring-boot-starter-data-jpa')
+    compile('org.springframework.boot:spring-boot-starter-mustache')
+    compile('com.h2database:h2')
+
+    compile('org.springframework.boot:spring-boot-starter-oauth2-client')
+    compile('org.springframework.session:spring-session-jdbc')
+
+    //mongo dbdb
+    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+
+    //calendar add
+    compile ('com.google.api-client:google-api-client:1.20.0')
+    compile ('com.google.oauth-client:google-oauth-client-jetty:1.20.0')
+    compile ('com.google.apis:google-api-services-calendar:v3-rev125-1.20.0')
+
+    // Craw
+    compile 'org.jsoup:jsoup:1.13.1'
+
+
+    compile('org.mariadb.jdbc:mariadb-java-client')
+
+    annotationProcessor("org.projectlombok:lombok:1.18.8")
+//    runtimeOnly 'mysql:mysql-connector-java'
+
+//    compile('org.springframework.boot')
+}
+

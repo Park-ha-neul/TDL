@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FullCalendar by Creative Tim </title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+
+    <link href='/assets/css/fullcalendar.css' rel='stylesheet' />
+    <link href='/assets/css/fullcalendar.print.css' rel='stylesheet' media='print' />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/calendar.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+
+
+
+</head>
+<body>
+<div id='wrap'>
+    <div id='calendar' style="position : relative">
+        <button type="button" class="btn" data-toggle="modal" data-target="#myModal2"
+                style="margin-left: auto; margin-top: auto; color: #EEB244;">
+            일정추가
+        </button>
+
+        <!--The Modal-->
+        <div class="modal fade" id="myModal2">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        일정작성
+                    </div>
+
+                    <input type="text" placeholder="제목 입력" id="schedule_title">
+                    <input type="text" placeholder="내용 입력" id="schedule_content">
+
+
+                    시작일
+                    <input type="date" class="datePicker" id="startDate" onChange="inputDateComparison(this);" value="">
+                    &nbsp;~&nbsp;
+                    종료일
+                    <input type="date" class="datePicker" id="endDate" onChange="inputDateComparison(this);" value=""/>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" id="submitBtn" data-dismiss="modal">submit</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style='clear:both'></div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+<script src='/assets/js/jquery-1.10.2.js' type="text/javascript"></script>
+<script src='/assets/js/jquery-ui.custom.min.js' type="text/javascript"></script>
+<script src='/assets/js/fullcalendar.js' type="text/javascript"></script>
+<script src="/js/calendar.js"></script>
+
+<!-- add -->
+
+
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+</body>
+</html>

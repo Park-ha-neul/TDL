@@ -1,0 +1,114 @@
+{{>layout/header}}
+<link rel="stylesheet" href="/css/memo.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<!--<link rel="stylesheet" href="/css/index.css">-->
+{{>layout/sidebar}}
+
+
+
+<div class="container">
+    <h2></h2>
+
+    <ul class="nav nav-tabs">
+        <li class="active" style="width: 50%; text-align: center;"><a data-toggle="tab" href="#home">작성한 메모</a></li>
+        <li style="width: 50%; text-align: center;"><a data-toggle="tab" href="#menu1">메모 휴지통</a></li>
+    </ul>
+
+    <div style="text-align:right; font-size: 18px; padding: 11px">
+        <i class="fas fa-plus" id="addmemo"></i>
+    </div>
+    <div class="tab-content">
+        <div id="home" class="tab-pane fade in active">
+            <div id="memoHome">
+            </div>
+            <div class="memoAddBtn" id="memoAddBtn">
+                <span><i class="fas fa-plus fa-2x"></i></span>
+                <div class="memoAddBtnText">More Memo...</div>
+            </div>
+        </div>
+        <div id="menu1" class="tab-pane fade">
+            <div id="trashHome">
+            </div>
+            <div class="memoAddBtn" id="trashAddBtn">
+                <span><i class="fas fa-plus fa-2x"></i></span>
+                <div class="memoAddBtnText">More Memo...</div>
+            </div>
+        </div>
+
+
+    </div><!-- 메모 등록 Modal -->
+    <div class="modal fade" id="myModal40">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">메모작성</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <label for="title">Title :</label>
+                    <input type="text" class="form-control" placeholder="제목 입력" id="memo_title">
+                    <br>
+                    <label for="content">Content :</label>
+                    <textarea class="form-control" style="resize:none;" rows="12" id="memo_content" placeholder="내용 입력"></textarea>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" id="registBtn">등록</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!--메모 상세보기 모달창-->
+
+    <div class="container">
+<!--        <h2>메모 상세보기</h2>-->
+        <!-- Trigger the modal with a button -->
+<!--        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal70">메모보기</button>-->
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal70" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>메모 보기</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                    </div>
+                    <div class="modal-body" id="memoDetail">
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" style="background-color: #007bff !important" id="memo_modify" display="block">메모수정</button>
+                        <button type="button" class="btn btn-primary" style="background-color: #007bff !important" id="memo_restore" display="none">복원</button>
+                        <button type="button" class="btn btn-danger" id="memo_detailDelete" display="block">삭제</button>
+                        <button type="button" class="btn btn-warning" id="memo_modifyBtn" display="none">수정</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+</div>
+{{>layout/footer}}
+{{>layout/script}}
+<script src='/js/memo.js'></script>
+<script src='/js/trash.js'></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+

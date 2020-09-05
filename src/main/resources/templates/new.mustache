@@ -1,0 +1,154 @@
+{{>layout/header}}
+
+<link rel="stylesheet" href="/css/new.css">
+
+{{>layout/sidebar}}
+
+<div class="w3-container">
+  <div id='top' style="display:none;">
+
+    <div class='left'>
+
+      <div id='theme-system-selector' class='selector'>
+        Theme System:
+
+        <select>
+          <option value='bootstrap' selected>Bootstrap 4</option>
+          <option value='standard'>unthemed</option>
+        </select>
+      </div>
+
+
+        <select>
+          <option value='litera'>Litera</option>
+        </select>
+
+
+      <span id='loading' style='display:none'>loading theme...</span>
+
+    </div>
+
+    <div class='clear'></div>
+  </div>
+
+  <div id='calendar'>
+  </div>
+
+  <div class="container">
+
+      <!-- Button to Open the Modal -->
+      <!-- The Modal -->
+      <div class="modal fade" id="myModal">
+          <div class="modal-dialog">
+              <div class="modal-content">
+
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+                      <h4 class="modal-title">일정추가</h4>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+
+                  <!-- Modal body -->
+                  <div class="modal-body">
+                      <!--checkbox start-->
+                      <label for="customRange1">중요도 :</label>
+                      <input type="range" class="custom-range" id="exRange">
+                      <!--checkbox end-->
+                      <div style="display:flex;">
+                          <div style="width: 50%; text-align: left; font-weight: bold;">0</div>
+                          <div style="width: 50%; text-align: right; font-weight: bold;">100</div>
+                      </div>
+
+                      <label for="title">일정 제목 :</label>
+                    <input type="text" class="form-control" placeholder="제목 입력" id="schedule_title">
+                      <br>
+                      <label for="content">일정 내용 :</label>
+                      <textarea class="form-control" rows="3" id="content" placeholder="내용 입력"></textarea>
+
+                      <div>
+                          <label for="start">시작일 :</label>
+                          <input type="date" class="form-control" id="start" readonly>
+                      </div>
+                      <div>
+                          <label for="end">종료일 :</label>
+                          <input type="date" class="form-control" id="end" style="display:none;" readonly>
+                          <input type="date" class="form-control" id="realEnd" readonly>
+                          <input type="date" class="form-control" id="distinct" style="display:none;" readonly>
+                      </div>
+                  </div>
+
+                  <!-- Modal footer -->
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-warning" id="submitBtn">Submit</button>
+                  </div>
+
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!--scroll modal-->
+  <div class="container">
+
+      <!-- The Modal -->
+      <div class="modal fade" id="myModal1">
+          <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content">
+
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+                      <h4 class="modal-title">일정 목록</h4>
+                  </div>
+
+                  <!-- Modal body -->
+                  <div class="modal-body" id="detailBox">
+                  </div>
+
+                  <!-- Modal footer -->
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-info" data-dismiss="modal" id="add">일정추가</button>
+                  </div>
+
+              </div>
+          </div>
+      </div>
+
+  </div>
+</div>
+  <!--일정 상세 보기 div-->
+  <div class="container">
+
+      <!-- The Modal -->
+      <div class="modal fade" id="myModal2">
+          <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content">
+
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+                      <h4 class="modal-title">일정 보기</h4>
+                      <button type="button" class="close" data-dismiss="modal">×</button>
+                  </div>
+
+                  <!-- Modal body -->
+                  <div class="modal-body" id="detail">
+
+                  </div>
+                  <input type="text" style="display:none" id="mId" value="">
+
+                  <!-- Modal footer -->
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" style="background-color: #007bff !important" id="modify" display="block">일정수정</button>
+                      <button type="button" class="btn btn-danger" id="detailDelete" display="block">삭제</button>
+                      <button type="button" class="btn btn-warning" id="modifyBtn" display="none">수정</button>
+                  </div>
+
+              </div>
+          </div>
+      </div>
+
+  </div>
+{{>layout/footer}}
+{{>layout/script}}
+<script src='/js/new.js'></script>
+
+

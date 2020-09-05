@@ -1,0 +1,97 @@
+ @font-face {
+    font-family:"NanumSquareRoundEB";
+    src:url("font/NanumSquareRoundEB.ttf") format("truetype");
+    font-style:normal;
+    font-weight:normal;
+ }
+
+ body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+  }
+
+  #top,
+  #calendar.fc-theme-standard {
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+  }
+
+  #calendar.fc-theme-bootstrap {
+    font-size: 14px;
+  }
+
+  #top {
+    background: #EEB244;
+    border-bottom: 1px solid #ddd;
+    padding: 0 10px;
+    line-height: 40px;
+    font-size: 12px;
+    color: #000;
+  }
+
+  #top .selector {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  #top select {
+    font: inherit; /* mock what Boostrap does, don't compete  */
+  }
+
+  .left { float: left }
+  .right { float: right }
+  .clear { clear: both }
+
+  #calendar {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 10px;
+  }
+
+  .fc .fc-toolbar-title {
+    margin-left: 480px;
+  }
+
+  .btn-primary:disabled {
+    color:#fff;
+    background-color: #EEB244 !important;
+    border-color: #EEB244 !important;
+  }
+
+  .fc .fc-prev-button btn btn-primary:hover{
+    color: #fff;
+    background-color: #eeb244;
+    border-color: #eeb244;
+  }
+
+  .fc .fc-prev-button {
+    border-radius: 15px 0 0 15px;
+    border-color: #eeb244;
+    color: #eeb244;
+    background-color: white;
+  }
+
+  .fc .fc-next-button {
+    border-radius: 0 15px 15px 0;
+    border-color: #eeb244;
+    color: #eeb244;
+    background-color: white;
+  }
+
+  .fc .fc-today-button {
+    border-radius: 15px;
+    background-color: #eeb244;
+    border-color: #eeb244;
+  }
+
+  .btn-group>.btn:hover {
+    background-color: #ffaa0d;
+    border-color: #ffaa0d;
+  }
+
+  .btn-primary:hover {
+    background-color: #ffaa0d !important;
+    border-color: #ffaa0d !important;
+  }
+
+

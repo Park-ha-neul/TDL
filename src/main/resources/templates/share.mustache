@@ -1,0 +1,53 @@
+{{>layout/header}}
+{{>layout/sidebar}}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<div class="container">
+    <!-- Trigger the modal with a button -->
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">SNS 공유</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                </div>
+                <div class="modal-body">
+                    <div class="line-it-button" data-lang="ko" data-type="share-a" data-ver="3" data-url="http://ec2-13-124-86-248.ap-northeast-2.compute.amazonaws.com:8080" data-color="default" data-size="large" data-count="false" style="display: none;"></div>
+                    <div id="fb-root"></div>
+                    <div class="fb-share-button" data-href="https://ec2-13-124-86-248.ap-northeast-2.compute.amazonaws.com:8080/" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flocal%3A8080%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">공유하기</a></div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+    <!--line-->
+<!--    <div class="line-it-button" data-lang="ko" data-type="share-a" data-ver="3" data-url="http://ec2-13-124-86-248.ap-northeast-2.compute.amazonaws.com:8080" data-color="default" data-size="large" data-count="false" style="display: none;"></div>-->
+
+
+    <!--facebook-->
+
+    <!--kakaostory-->
+<!--    <div id="kakaostory-follow-button" data-id="kakao" data-show-follower-count="false" data-type="vertical"></div>-->
+
+
+<script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
+{{>layout/script}}
+
+<script src="/js/share.js"></script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v7.0&appId=282603849612393&autoLogAppEvents=1" nonce="63Hck5rE"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</html>

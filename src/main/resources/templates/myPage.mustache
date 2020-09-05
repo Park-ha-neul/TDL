@@ -1,0 +1,27 @@
+{{>layout/header}}
+
+{{>layout/sidebar}}
+
+
+
+<div class="myPage">
+    <div class="text-center profile-card" style="margin:15px;background-color:#ffffff;">
+        <h1 class="title">Profile</h1>
+        <i onclick="userOut()" class="fas fa-sign-out-alt" style="cursor:pointer; margin-left: 1100px; font-size: 2em" ></i>
+        <div class="profile-card-img" style="background-image:url('iceland.jpg');height:100px;background-size:cover;"></div>
+        <div><img class="rounded-circle" style="margin-top:-70px;" src="https://scontent-ssn1-1.xx.fbcdn.net/v/t1.0-9/16196015_10154888128487744_6901111466535510271_n.png?_nc_cat=103&amp;_nc_sid=85a577&amp;_nc_ohc=NQb6k3HxeOwAX_-2w4r&amp;_nc_ht=scontent-ssn1-1.xx&amp;oh=20580cf63159dbf484dea533ed56476b&amp;oe=5F244597"
+                  height="150px" />
+            <h3 class="name">{{ user.name }}</h3>
+            <h4 class="email">{{ user.email }}</h4>
+            <div style="width: 100%; text-align: center;">
+                <button type="button" class="btn btn-primary" onclick="location.href='/logout'">로그아웃</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{{>layout/script}}
+<script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+{{>layout/footer}}

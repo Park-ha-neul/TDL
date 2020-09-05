@@ -1,0 +1,44 @@
+.dayBox {
+    width: 100%;
+    display:flex;
+    box-shadow: 0px 0px 8px 0px lightgray;
+}
+
+.dayLine{
+    width: 3%;
+    height: 130px;
+    background-color: #EEB244;
+}
+
+.dayBoxContents{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.dayTitle {
+    font-size: 40px;
+    color: #EEB244;
+    height: 40%;
+    padding: 0% 1%;
+    font-weight: bold;
+}
+
+.dayDate {
+    font-size: 15px;
+    opacity: 0.5;
+}
+
+.dayContents {
+    font-size: 1.2em;
+    padding-bottom: 10px;
+    height: 30px;
+}
+
+.countDate {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 60%;
+    padding: 0% 1%;
+}

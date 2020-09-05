@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <title>TDL</title>
+</head>
+<body>
+<div class="wrapper">
+    <span class = "TDL">TDL</span>
+    <span class = "text-faded">'TDL'은 캘린더를 통해<br/>
+		일정관리 및 디데이를 설정할 수 있는 사이트입니다.</span>
+    <br>
+    <button class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="background-color:#fdcb6e; border-color:#fdcb6e;
+color: #eeb244; color:white;
+    text-decoration: none;">Getting started</button>
+
+    <!--Modal start-->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+
+                <!--Modal body-->
+                <div class="modal-body" style="padding:0px;">
+                    <div class="login" style="padding:0px;">
+                        <form method="POST">
+                            <h2 class="form" style="text-align: center; margin-bottom: 10px;">LOGIN</h2>
+                            <div class="form-group">
+                                <a href="/oauth2/authorization/google" style="display: flex;">
+                                    <img src="/img/google.png" style="margin: 0 auto;">
+                                </a>
+                                <a href="/oauth2/authorization/naver" style="display: flex;">
+                                    <img src="/img/naver.png" style="margin: 0 auto;">
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/js/bg.js"></script>
+</body>
+</html>
